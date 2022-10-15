@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid;
+
+        }
+    </style>
+</head>
+<body>
+    <table cellpadding='5' border="1">
+        <script>
+            let x = 10, y = 5
+        </script>
+
+        <tr>
+            <td>operator</td>
+            <td>example</td>
+            <td>result</td>
+        </tr>
+        <tr>
+            <td>=</td>
+            <td>x=y</td>
+            <td>
+                <script>
+                    document.write(y)
+                </script>
+            </td>
+        </tr>
+
+        <tr>
+            <td>+=</td>
+            <td>x += y</td>
+            <td>
+                <script>
+                    x = 10
+                    y = 5
+                    x += y
+                    document.write(x)
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>-=</td>
+            <td>x -= y</td>
+            <td>
+                <script>
+                    x = 10
+                    y = 5
+                    x -= y
+                    document.write(x)
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>*=</td>
+            <td>x *= y</td>
+            <td>
+                <script>
+                    x = 10
+                    y = 5
+                    x *= y
+                    document.write(x)
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>/=</td>
+            <td>x /= y</td>
+            <td>
+                <script>
+                    x = 10
+                    y = 5
+                    x /= y
+                    document.write(x)
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>%=</td>
+            <td>x %= y</td>
+            <td>
+                <script>
+                    x = 10
+                    y = 5
+                    x %= y
+                    document.write(x)
+                </script>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
