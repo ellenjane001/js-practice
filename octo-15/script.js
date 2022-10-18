@@ -1,7 +1,7 @@
 let counter = 1
 let btn1 = document.getElementById('btn-1')
 let btn2 = document.getElementById('btn-2')
-btn1.addEventListener('click', function () {
+btn1.onclick = function () {
     let img_obj = document.querySelector('img.img-fluid')
     if (counter > 1) {
         counter--
@@ -24,8 +24,8 @@ btn1.addEventListener('click', function () {
     else {
         return
     }
-})
-btn2.addEventListener('click', function () {
+}
+btn2.onclick = function () {
     let img_obj = document.querySelector('img.img-fluid')
     if (counter < 4) {
         counter++
@@ -48,4 +48,4 @@ btn2.addEventListener('click', function () {
     else {
         return
     }
-})
+}

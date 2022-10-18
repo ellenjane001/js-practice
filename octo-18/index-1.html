@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="year" id="year">
+    <button id="btn">log age</button>
+    <script>
+        function getAge(yearBorn) {
+            let intYearBorn = parseInt(yearBorn)
+            const today = Date.now()
+            const d = new Date(today)
+            age = d.getFullYear() - intYearBorn
+            return age
+        }
+        document.getElementById('btn').onclick = function () { console.log(getAge(document.getElementById('year').value)) }
+
+
+    </script>
+</body>
+</html>
