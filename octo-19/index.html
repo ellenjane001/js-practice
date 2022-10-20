@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="num-p" id="num-p">
+    <button onclick="getAForm()">click</button>
+    <div id="form-container">
+
+    </div>
+    <script>
+        let pContainer = document.getElementById('form-container')
+        function getAForm() {
+            let tParticipants = parseInt(document.getElementById('num-p').value)
+            let counter = 0
+            let tags = ''
+            while (counter < tParticipants) {
+                counter++
+                tags += `<p>
+                    <label>Enter Attendee ${counter} </label>
+                    <input type="text" placeholder="Name of attendee">
+                    </p>`
+                console.log(counter)
+            }
+            tags += `<p><input type="submit" value="submit"></p>`
+            pContainer.innerHTML = tags
+        }
+    </script>
+</body>
+</html>
