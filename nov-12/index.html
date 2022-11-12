@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const timeStart = () => {
+            let today = new Date()
+            let h = today.getHours()
+            let m = today.getMinutes()
+            let s = today.getSeconds()
+            if (m < 10)
+                m = `0${m}`
+            if (s < 10)
+                s = `0${s}`
+
+            p.innerHTML = `${h}:${m}:${s}`
+
+            t = setTimeout(() => {
+                timeStart()
+            }, 500);
+        }
+        let p = document.createElement('p')
+        p.classList.add = ''
+        document.body.appendChild(p)
+        document.body.onload = timeStart
+    </script>
+</body>
+</html>
