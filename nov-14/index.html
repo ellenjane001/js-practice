@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="temperature" placeholder="enter temperature">
+        <select name="degrees" id="unit">
+            <option value="F">Farhenheit</option>
+            <option value="C">Celsius</option>
+            <option value="FK">Farhenheit to Kelvin</option>
+            <option value="CK">Celsius to Kelvin</option>
+        </select>
+        <div id="result">
+
+        </div>
+    </div>
+    <script src="./classes.js"></script>
+    <script>
+        document.getElementById('unit').onchange = (e) => {
+            let temp = parseFloat(document.getElementById('temperature').value)
+            let c = new Converter()
+            let v = 0
+
+            if (temp !== '' || temp !== 0) {
+                switch (e.target.value) {
+                    case 'F':
+                        document.getElementById('result').innerHTML = c.convertToFarhenheit(temp)
+                        break
+                    case 'C':
+                        document.getElementById('result').innerHTML = c.convertToCelsius(temp)
+                        break
+                    case 'FK':
+                        document.getElementById('result').innerHTML = c.convertToKelvin('F', temp)
+                        break
+                    case 'CK':
+                        document.getElementById('result').innerHTML = c.convertToKelvin('C', temp)
+                        break
+                    default:
+                        document.getElementById('result').innerHTML = 'invalid value'
+                }
+
+            } else {
+                document.getElementById('result').innerHTML = 'invalid value'
+            }
+        }
+    </script>
+</body>
+</html>
