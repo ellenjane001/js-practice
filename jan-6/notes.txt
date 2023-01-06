@@ -1,0 +1,2 @@
+this is written in nodejs
+I am Ellen, 24 and currently living in Palawan
