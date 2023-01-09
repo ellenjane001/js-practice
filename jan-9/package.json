@@ -1,0 +1,15 @@
+{
+  "name": "kodegotest",
+  "version": "1.0.0",
+  "description": "kodego test",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "ellen",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "validator": "^13.7.0"
+  }
+}
