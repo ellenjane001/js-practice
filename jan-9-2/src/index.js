@@ -57,6 +57,10 @@ app.get('/customers', (req, res) => {
     res.send(customers)
 })
 
+app.get('/new', (req, res) => {
+    res.send('test')
+})
+
 app.post('/register', (req, res) => {
     console.log(req.body)
     // res.send('registration successful')
