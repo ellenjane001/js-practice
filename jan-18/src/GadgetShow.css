@@ -1,0 +1,17 @@
+img {
+    object-fit: contain;
+}
+
+.gadget {
+    height: 200px;
+}
+
+.gadget-container {
+    position: absolute;
+}
+
+.heart {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}

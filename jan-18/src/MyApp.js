@@ -3,7 +3,7 @@ import { useState } from "react"
 import GadgetShow from "./GadgetShow"
 
 const getRandomGadget = () => {
-    const gadgets = ['laptop', 'phone', 'watch', 'ipad', 'e-bike']
+    const gadgets = ['laptop', 'phone', 'watch', 'ipad', 'e-bike', 'tablet']
     return gadgets[Math.floor(Math.random() * gadgets.length)]
 }
 
@@ -19,7 +19,7 @@ function App() {
     }
     return (<div className='App'>
         <h1>{count}</h1>
-        <p>{gadgetsForRendering}</p>
+        {gadgetsForRendering}
         <Button variant="contained" onClick={handleClick}>Generate</Button>
     </div>)
 }
