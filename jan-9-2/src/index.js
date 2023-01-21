@@ -12,8 +12,9 @@ app.use(express.static(path.join(__dirname, '../public')))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => {
+app.get('', (req, res) => {
     // res.send('Hello WD19P learners')
+    res.sendFile(path.join(__dirname, '../public/build/index.html'))
 })
 
 app.get('/test', (req, res) => {
