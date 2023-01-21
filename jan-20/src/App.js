@@ -7,8 +7,6 @@ const App = () => {
   const [images, setImages] = useState([])
   let url = 'https://api.unsplash.com/search/photos'
   const handleKeyDown = async (event) => {
-    console.log(event.keyCode)
-    console.log(event.target.value)
     if (event.keyCode === 13) {
       const func = async () => {
         let response = await axios.get(url, {
@@ -20,10 +18,19 @@ const App = () => {
         })
         return response
       }
-      let r = await func()
+      try {
+        let r = await func()
+        if (r.length > 0) {
+          setImages([...r.data.results])
+        } else {
+          throw Error('no images found')
+        }
 
-      console.log(r.data.results)
-      setImages([...r.data.results])
+
+      } catch (e) {
+        console.log(e)
+      }
+
     }
   }
   console.log(images)
