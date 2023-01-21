@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
-    res.send('Hello WD19P learners')
+    // res.send('Hello WD19P learners')
 })
 
 app.get('/test', (req, res) => {
