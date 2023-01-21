@@ -8,7 +8,7 @@ const { urlencoded } = require('body-parser')
 
 app.set('view engine', 'hbs')
 
-app.use(express.static(path.join(__dirname, '../public.build')))
+app.use(express.static(path.join(__dirname, '../public/build')))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
