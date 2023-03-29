@@ -1,2 +1,5 @@
 node_modules
 jan-9-2/public/build
+# next.js
+/.next/
+/out/
