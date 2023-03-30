@@ -3,13 +3,9 @@ import Home from '../src/pages/index'
 import '@testing-library/jest-dom'
 
 describe('Home', () => {
-  it('renders a heading', () => {
+  it('renders a test', () => {
     render(<Home />)
-
-    const heading = screen.getByRole('heading', {
-      name: /Find in-depth information about Next.js features and&nbsp;API./i,
-    })
-
-    expect(heading).toBeInTheDocument()
+    const test = screen.getByText('Test')
+    expect(test).toBeInTheDocument()
   })
 })
