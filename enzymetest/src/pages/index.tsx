@@ -1,6 +1,7 @@
 import styles from '@/styles/Home.module.css'
 import Head from 'next/head'
 import * as React from 'react'
+import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
@@ -13,6 +14,17 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div data-testid="thisIsATest">This is a test</div>
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 2 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20
+          }}
+         data-testid="HelloWorld">
+          Hello World
+        </motion.div>
         <div data-testid="testing">Testing</div>
       </main>
     </>

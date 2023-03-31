@@ -9,5 +9,6 @@ describe('Sample Test', () => {
         render(<Home />)
         expect(screen.getByTestId("thisIsATest")).toBeInTheDocument();
         expect(screen.getByTestId("testing")).toBeInTheDocument();
+        expect(screen.getByTestId("HelloWorld")).toBeInTheDocument();
     });
 });
